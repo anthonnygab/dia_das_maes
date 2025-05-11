@@ -1,0 +1,64 @@
+ body {
+      background-color: #fff0f5;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      padding-top: 60px;
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      position: relative;
+      margin: 0 auto;
+      cursor: pointer;
+      transform: rotate(-45deg);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+
+    .hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0);
+    }
+
+    .message {
+      display: none;
+      margin-top: 30px;
+    }
+
+    .message img {
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .message h2 {
+      color: #e91e63;
+      margin-top: 20px;
+      font-size: 2em;
+    }
+
+    .show {
+      display: block;
+    }
